@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME VIDEO PAGE 1</title>
+    <link rel="stylesheet" href="prime video page 1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: calibri, sans-serif;
+        }
+
+        .navbar {
+            background-color: black;
+            color: rgb(176, 176, 176);
+        }
+
+        .navbar ul {
+            overflow: auto;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+            color: rgb(206, 206, 206);
+            margin-left: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(209, 209, 209);
+            width: 100px;
+            display: block;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        li a:hover {
+            background: rgba(0, 195, 255, 0.179);
+        }
+
+        .box1, .box2, .box3 {
+            padding: 20px;
+        }
+
+        .box1 h1, .box2 h1, .box3 h1 {
+            font-size: 45px;
+            font-family: calibri;
+            text-transform: capitalize;
+            margin-left: 50px;
+        }
+
+        .box1 p, .box2 p, .box3 p {
+            font-size: xx-large;
+            font-family: calibri;
+            text-transform: capitalize;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+
+        .box1, .box3 {
+            background-color: black;
+            color: white;
+        }
+
+        .box2 {
+            background-color: white;
+            color: black;
+        }
+
+        .box1 button, .box3 button {
+            width: 200px;
+            height: 35px;
+            background-color: rgb(0, 78, 109);
+            color: white;
+            font-size: large;
+            border-radius: 3px;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        .box2 a img {
+            width: 100%;
+            max-width: 250px;
+            margin: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .box2 a img:hover {
+            box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        .footer {
+            text-align: center;
+            background-color: rgb(24, 24, 24);
+            color: white;
+            padding: 20px;
+        }
+
+        .footer a {
+            margin-left: 10px;
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+
+        .footer a:hover {
+            color: red;
+        }
+
+        .footer p {
+            line-height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            .navbar li {
+                display: block;
+                margin-left: 0;
+                font-size: 18px;
+            }
+
+            .box1, .box3 {
+                text-align: center;
+            }
+
+            .box1 h1, .box3 h1 {
+                font-size: 30px;
+            }
+
+            .box1 p, .box2 p, .box3 p {
+                font-size: large;
+                margin-left: 10px;
+                margin-top: 5px;
+            }
+
+            .box1 button, .box3 button {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .box2 a img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .box2 h1 {
+                font-size: 30px;
+                padding-left: 10px;
+            }
+
+            .footer p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar li {
+                font-size: 16px;
+            }
+
+            .box1, .box3 {
+                text-align: center;
+            }
+
+            .box2 a img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .box1 h1, .box2 h1, .box3 h1 {
+                font-size: 28px;
+                padding-left: 10px;
+            }
+
+            .box1 p, .box2 p, .box3 p {
+                font-size: medium;
+                margin-left: 10px;
+            }
+
+            .box1 button, .box3 button {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Prime video</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Live TV</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="#">Try For Free</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Box 1: Prime Video Welcome Section -->
+    <div class="box1">
+        <table>
+            <tr>
+                <td>
+                    <h1>Welcome to Prime Video</h1>
+                    <p>Watch the latest movies, TV shows, and award-winning Amazon originals.</p>
+                    <a href="PRIME VIDEO PAGE 2.html" target="_blank"><button type="submit">Sign In to Join Prime</button></a>
+                </td>
+                <td><img src="image 2.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Movie rentals on Prime Video</h1>
+                    <p>Early access to new movies, before digital subscription.</p>
+                    <a href="http://127.0.0.1:5500/PRIME%20VIDEO%20PAGE%204.html"><button type="submit">Rent Now</button></a>
+                </td>
+                <td><img src="image 2.jpg" alt=""></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Box 2: Prime Video Channels -->
+    <div class="box2">
+        <table>
+            <tr>
+                <td><h1>Your favorite channels all in one place</h1>
+                    <p>With Prime Video Channels, find shows and movies from your favorite channels, all in one place. Enjoy with an add-on subscription to Channels of your choice.</p></td>
+                <td>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/LionsgatePlay-426X2946_V1.jpg" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery.jpg" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_BBC_PLAYER.png" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MANORAMAMAX.jpg" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/hoichoi-426X2946_V1.jpg" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Chaupal.png" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Anime.jpg" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294.png" alt=""></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_MGMPLUS.png" alt=""></a>
+                </td>
+            </tr>
+        </table>
+    </div><br>
+
+    <!-- Box 3: Fire TV Stick -->
+    <div class="box3">
+        <table>
+            <tr>
+                <td><img src="image 3.png" alt=""></td>
+                <td><h1>Even better with Fire TV Stick</h1>
+                    <p>The biggest movies and TV shows are always better on a big screen. Simply plug in your Amazon Fire TV Stick and stream on any HDTV. Press the voice button on the remote and say the name of the title you want to watch to find it in seconds.</p><br>
+                    <a href="#"><button type="submit">Get Started</button></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <center><img src="pv logo.png" alt=""></center>
+        <a href="#">Terms and Privacy Notice</a>&nbsp;&nbsp
+        <a href="#">Send us feedback</a>&nbsp;&nbsp
+        <a href="#">Help</a><br><br>
+        © 1996-2024, Amazon.com, Inc. or its affiliates
+    </div><br><br>
+</body>
+</html>

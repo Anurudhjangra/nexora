@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — NEXORA | Anirudh Jangra</title>
+  <meta name="description" content="Freelance web services by Anirudh Jangra at NEXORA — web development, UI/UX design, e-commerce, WordPress and SEO." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B2342'/%3E%3Cpath d='M21 20v24M21 20l22 24V20' stroke='%23F6F1E7' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='43' cy='42' r='4' fill='%236A1F2E'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+
+  <!-- ======= NAVBAR ======= -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letter">N</span>
+          <span class="brand-mark-dot"></span>
+        </span>
+        <span class="brand-name">Nexora</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="services.html" class="nav-link is-active">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-midnight nav-cta">Hire Me</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= PAGE HERO ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">Services</p>
+        <h1 class="page-title reveal">What I can do <span class="serif-italic wine">for you</span></h1>
+        <p class="page-sub reveal">
+          Everything you need to get online — or make your existing site better.
+          One freelancer, full ownership, transparent pricing.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= SERVICES ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="services-list">
+          <article class="service-row reveal">
+            <span class="service-num">01</span>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">Business websites, landing pages and web apps built with modern HTML, CSS, JavaScript and React. Fast, clean and easy to maintain.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">02</span>
+            <h3 class="service-title">UI / UX Design</h3>
+            <p class="service-desc">Clean, user-friendly designs in Figma that look premium and convert visitors into customers. Includes wireframes and clickable prototypes.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">03</span>
+            <h3 class="service-title">Responsive &amp; Fast</h3>
+            <p class="service-desc">Every site works perfectly on mobile, tablet and desktop — and loads fast for better SEO and lower bounce rates.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">04</span>
+            <h3 class="service-title">E-Commerce</h3>
+            <p class="service-desc">Online stores with product pages, cart and a checkout-ready frontend so you can start selling quickly.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">05</span>
+            <h3 class="service-title">WordPress &amp; Maintenance</h3>
+            <p class="service-desc">Setup, updates, bug fixes and security improvements for WordPress and existing websites so they stay fresh.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">06</span>
+            <h3 class="service-title">SEO &amp; Performance</h3>
+            <p class="service-desc">On-page SEO basics, meta tags, structure and speed tuning so your website actually gets found on Google.</p>
+            <span class="service-arrow">→</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= PRICING ======= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="price-head reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2 class="section-title">Simple, Honest <span class="serif-italic wine">Prices</span></h2>
+          <p class="page-sub">
+            Clear starting prices — no hidden charges. Final quote after a quick chat
+            about your requirements. <b style="color: var(--midnight);">Student discounts available.</b>
+          </p>
+        </div>
+
+        <p class="eyebrow reveal" style="margin-top: 54px;">For Students &amp; Freshers</p>
+        <h3 class="subhead reveal">College projects, assignments &amp; practicals</h3>
+
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <span class="price-tag">Assignment Help</span>
+            <h3 class="price-title">Assignments &amp; Practicals</h3>
+            <b class="price-amount"><small>starting from</small>₹249</b>
+            <ul class="price-list">
+              <li>HTML / CSS / JS assignments</li>
+              <li>Practicals &amp; lab files</li>
+              <li>Working code + explanation</li>
+              <li>Delivered in 24–48 hrs</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-ghost" data-open-order data-plan="Assignments &amp; Practicals">Order Now</a>
+            </div>
+          </article>
+
+          <article class="price-card highlight reveal">
+            <span class="price-tag">College Projects</span>
+            <h3 class="price-title">Mini / College Project</h3>
+            <b class="price-amount"><small>starting from</small>₹1,499</b>
+            <ul class="price-list">
+              <li>Semester / mini web project</li>
+              <li>Complete working code</li>
+              <li>Project report + PPT</li>
+              <li>Demo + explanation call</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-wine" data-open-order data-plan="Mini / College Project">Order Now</a>
+            </div>
+          </article>
+
+          <article class="price-card reveal">
+            <span class="price-tag">Final Year</span>
+            <h3 class="price-title">Major / Final Year Project</h3>
+            <b class="price-amount"><small>starting from</small>₹4,999</b>
+            <ul class="price-list">
+              <li>Full final-year web project</li>
+              <li>Complete code + database</li>
+              <li>Project report + PPT + synopsis</li>
+              <li>Support till submission</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-ghost" data-open-order data-plan="Major / Final Year Project">Order Now</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="eyebrow reveal" style="margin-top: 54px;">Website Packages</p>
+        <h3 class="subhead reveal">For businesses, freelancers &amp; freshers</h3>
+
+        <div class="price-grid cols-4">
+          <article class="price-card reveal">
+            <span class="price-tag">Best for Freshers</span>
+            <h3 class="price-title">Landing Page</h3>
+            <b class="price-amount"><small>starting from</small>₹1,999</b>
+            <ul class="price-list">
+              <li>1-page responsive design</li>
+              <li>Mobile + desktop perfect</li>
+              <li>Contact / WhatsApp button</li>
+              <li>SEO basics + speed</li>
+              <li>Delivery in 3–5 days</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-ghost" data-open-order data-plan="Landing Page">Get Quote</a>
+            </div>
+          </article>
+
+          <article class="price-card highlight reveal">
+            <span class="price-tag">Most Popular</span>
+            <h3 class="price-title">Business Website</h3>
+            <b class="price-amount"><small>starting from</small>₹4,999</b>
+            <ul class="price-list">
+              <li>Up to 6 pages</li>
+              <li>Working contact form</li>
+              <li>Services + about + gallery</li>
+              <li>SEO basics + analytics</li>
+              <li>Delivery in 1–2 weeks</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-wine" data-open-order data-plan="Business Website">Get Quote</a>
+            </div>
+          </article>
+
+          <article class="price-card reveal">
+            <span class="price-tag">For Selling Online</span>
+            <h3 class="price-title">E-Commerce Store</h3>
+            <b class="price-amount"><small>starting from</small>₹9,999</b>
+            <ul class="price-list">
+              <li>Product pages + catalog</li>
+              <li>Shopping cart</li>
+              <li>Checkout-ready frontend</li>
+              <li>Order enquiry forms</li>
+              <li>Delivery in 2–4 weeks</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-ghost" data-open-order data-plan="E-Commerce Store">Get Quote</a>
+            </div>
+          </article>
+
+          <article class="price-card reveal">
+            <span class="price-tag">Interactive</span>
+            <h3 class="price-title">Web App (React)</h3>
+            <b class="price-amount"><small>starting from</small>₹11,999</b>
+            <ul class="price-list">
+              <li>Dashboards &amp; tools</li>
+              <li>Interactive UI &amp; filters</li>
+              <li>React + modern frontend</li>
+              <li>API integration</li>
+              <li>Delivery in 2–5 weeks</li>
+            </ul>
+            <div class="price-foot">
+              <a href="#" class="btn btn-ghost" data-open-order data-plan="Web App (React)">Get Quote</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="eyebrow reveal" style="margin-top: 54px;">Add-On Services</p>
+        <div class="price-addons reveal">
+          <div class="price-addon"><span>UI / UX Design (Figma)</span><b>from ₹999</b></div>
+          <div class="price-addon"><span>Portfolio / Personal Site</span><b>from ₹2,999</b></div>
+          <div class="price-addon"><span>WordPress Setup</span><b>from ₹1,499</b></div>
+          <div class="price-addon"><span>Website Fixes &amp; Updates</span><b>from ₹499</b></div>
+          <div class="price-addon"><span>Hosting + Domain Help</span><b>from ₹499</b></div>
+          <div class="price-addon"><span>Monthly Maintenance</span><b>from ₹999</b></div>
+        </div>
+
+        <p class="price-note reveal">
+          Prices are starting prices based on typical projects. Final price depends on
+          the exact work — tell me what you need and I'll give you a fixed quote before
+          starting. Order directly on WhatsApp:
+          <a href="https://wa.me/919050543063" target="_blank" rel="noopener">+91 90505 43063</a>
+          or use the
+          <a href="contact.html">contact form</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= PROCESS ======= -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">How It Works</p>
+        <h2 class="section-title reveal">A Simple, Clear <span class="serif-italic wine">Process</span></h2>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <span class="process-num">01</span>
+            <h3>Discover</h3>
+            <p>We talk about your goals, audience and what you need. I ask the right questions to understand the project.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-num">02</span>
+            <h3>Design</h3>
+            <p>I create a clean design in Figma so you can see and approve the look before any code is written.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-num">03</span>
+            <h3>Develop</h3>
+            <p>I build the site with clean, modern code. Regular progress updates, so there are no surprises.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-num">04</span>
+            <h3>Deliver</h3>
+            <p>Testing, launch and a walkthrough. Plus support after launch so everything keeps running smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= WHAT'S INCLUDED ======= -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">What You Get</p>
+        <h2 class="section-title reveal">Every Project <span class="serif-italic wine">Includes</span></h2>
+
+        <div class="feature-list">
+          <div class="feature-card reveal">
+            <h3>Mobile-First Design</h3>
+            <p>Your site looks great on every phone, tablet and desktop out of the box.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3>Speed Optimisation</h3>
+            <p>Fast loading pages — because slow websites lose customers.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3>SEO Basics</h3>
+            <p>Clean structure, meta tags and fast pages to help you get found on Google.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3>Contact Forms</h3>
+            <p>Working enquiry and contact forms that deliver messages straight to your email.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3>Clear Communication</h3>
+            <p>Regular updates in simple language. You'll never wonder what's happening.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h3>Support After Launch</h3>
+            <p>I don't disappear after delivery. Questions and small fixes are welcome.</p>
+          </div>
+        </div>
+
+        <div class="cta-band reveal" style="margin-top: 60px;">
+          <div>
+            <h2>Not sure which service you need?</h2>
+            <p>Send me a message — I'll tell you honestly what's best for your project.</p>
+          </div>
+          <a href="contact.html" class="btn btn-wine">Ask Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= ORDER MODAL ======= -->
+  <div class="modal" id="order-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <p class="eyebrow">Quick Order</p>
+      <h2 class="modal-title" id="order-modal-title">Place Your <span class="serif-italic wine">Order</span></h2>
+      <p class="modal-sub">Fill in your details — I'll confirm your quote on WhatsApp.</p>
+
+      <form class="contact-form order-form" id="order-form">
+        <div class="field">
+          <label for="order-plan">Selected Plan</label>
+          <input type="text" id="order-plan" name="plan" readonly />
+        </div>
+        <div class="field">
+          <label for="order-name">Full Name</label>
+          <input type="text" id="order-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="order-email">Email</label>
+          <input type="email" id="order-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="order-phone">Phone / WhatsApp</label>
+          <input type="tel" id="order-phone" name="phone" placeholder="+91..." required />
+        </div>
+        <div class="field">
+          <label for="order-college">College &amp; Class Name</label>
+          <input type="text" id="order-college" name="college" placeholder="e.g. BCA 2nd Year, Kurukshetra University" />
+        </div>
+        <div class="field">
+          <label for="order-details">About Your Project</label>
+          <textarea id="order-details" name="details" rows="4" placeholder="What do you need? Pages, features, deadline..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-wine btn-block">Send Order</button>
+        <p class="form-note" id="order-note"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-letter">N</span>
+            <span class="brand-mark-dot"></span>
+          </span>
+          <span class="brand-name">Nexora</span>
+        </a>
+        <p class="footer-brand-text">
+          Clean, modern and premium websites for businesses, freelancers and startups.
+          Built to look great and work even better.
+        </p>
+        <div class="socials footer-socials">
+          <a href="#" class="social">GitHub</a>
+          <a href="#" class="social">LinkedIn</a>
+          <a href="#" class="social">Instagram</a>
+          <a href="#" class="social">Behance</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Web Development</a>
+        <a href="services.html">UI / UX Design</a>
+        <a href="services.html">E-Commerce Stores</a>
+        <a href="services.html">College Projects</a>
+        <a href="services.html">WordPress &amp; Fixes</a>
+        <a href="services.html">SEO &amp; Performance</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:anirudhjangra3@gmail.com">anirudhjangra3@gmail.com</a>
+        <a href="tel:+919050543063">+91 90505 43063</a>
+        <span class="footer-avail">Open for freelance work</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <p>© 2026 NEXORA. All rights reserved.</p>
+        <button class="back-top" id="back-top">Back to top ↑</button>
+      </div>
+      <p class="footer-credit">Designed &amp; developed with <span class="heart">❤️</span> by Anirudh Jangra</p>
+    </div>
+  </footer>
+
+  <!-- ======= VISITOR POPUP ======= -->
+  <div class="modal visitor-popup" id="visitor-popup" aria-hidden="true">
+    <div class="modal-backdrop" data-close-popup></div>
+    <div class="modal-dialog popup-dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="modal-close" data-close-popup aria-label="Close">&times;</button>
+      <p class="eyebrow">Welcome</p>
+      <h2 class="modal-title" id="popup-title">Thanks for <span class="serif-italic wine">visiting!</span></h2>
+      <p class="modal-sub">Drop your name and number — I'll reach out to help you.</p>
+      <form class="contact-form order-form" id="popup-form">
+        <div class="field">
+          <label for="popup-name">Your Name</label>
+          <input type="text" id="popup-name" name="name" placeholder="Full name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="popup-mobile">Mobile Number</label>
+          <input type="tel" id="popup-mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel" required />
+        </div>
+        <button type="submit" class="btn btn-wine btn-block">Get Help</button>
+        <p class="form-note" id="popup-note"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="bg3d.js"></script>
+  <script src="script.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

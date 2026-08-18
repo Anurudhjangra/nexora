@@ -1,0 +1,109 @@
+/* ============================================================
+   NEXORA — VISITOR POPUP
+   - Shows a form when someone visits the site (once per day)
+   - Saves name + mobile to MongoDB via /api/leads
+   - Server auto-sends a WhatsApp message (Cloud API) from your
+     number to the visitor
+   ============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("visitor-popup");
+  const form = document.getElementById("popup-form");
+  const note = document.getElementById("popup-note");
+  if (!popup || !form) return;
+
+  const nameInput = document.getElementById("popup-name");
+  const mobileInput = document.getElementById("popup-mobile");
+  const submitBtn = form.querySelector(".btn");
+
+  const LS_KEY = "nexora_popup_seen";
+  const SHOW_DELAY = 2500;
+
+  const isValidMobile = (v) => /^[6-9]\d{9}$/.test(v);
+
+  const openPopup = () => {
+    popup.classList.add("open");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    if (nameInput) setTimeout(() => nameInput.focus(), 150);
+  };
+
+  const closePopup = () => {
+    popup.classList.remove("open");
+    popup.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  /* Show once per day (per browser) */
+  const schedule = () => {
+    try {
+      const seen = localStorage.getItem(LS_KEY);
+      if (seen === new Date().toDateString()) return;
+      localStorage.setItem(LS_KEY, new Date().toDateString());
+    } catch (e) {
+      /* localStorage unavailable — still show the popup */
+    }
+    setTimeout(openPopup, SHOW_DELAY);
+  };
+
+  popup.querySelectorAll("[data-close-popup]").forEach((el) => {
+    el.addEventListener("click", closePopup);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popup.classList.contains("open")) closePopup();
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const mobile = String(mobileInput.value || "")
+      .replace(/\D/g, "")
+      .replace(/^0/, "")
+      .replace(/^91(?=[6-9]\d{9}$)/, "");
+
+    if (name.length < 2) {
+      note.textContent = "Please enter your name.";
+      note.classList.add("error");
+      return;
+    }
+    if (!isValidMobile(mobile)) {
+      note.textContent = "Please enter a valid 10-digit mobile number (6-9 se shuru).";
+      note.classList.add("error");
+      return;
+    }
+
+    note.textContent = "Saving your details...";
+    note.classList.remove("error");
+    submitBtn.disabled = true;
+
+    /* Save the lead — the server then auto-sends a WhatsApp message
+       from 9050132207 to this visitor's number */
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, mobile }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error("save failed");
+
+      if (data.whatsapp) {
+        note.textContent =
+          "Thanks " + name + "! A WhatsApp message is on its way to your number.";
+      } else {
+        note.textContent =
+          "Thanks " + name + "! Your details are saved — I'll message you on WhatsApp soon.";
+      }
+    } catch (err) {
+      note.textContent = "Thanks " + name + "! I'll reach out on WhatsApp shortly.";
+    }
+
+    note.classList.remove("error");
+    submitBtn.textContent = "Done";
+    setTimeout(closePopup, 2000);
+  });
+
+  schedule();
+});

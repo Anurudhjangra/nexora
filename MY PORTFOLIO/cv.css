@@ -1,0 +1,50 @@
+body{
+    background: black;
+    color: white;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home-contant{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #bf2828;
+}
+
+.home-contant h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home img{
+    position: relative;
+    width: 42vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid red;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;background-color: transparent;
+    border: 0.2rem solid red;
+}

@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background-image: url(photo1.jpg);
+    height: 600px;
+    background-size: cover;
+}
+.nav ul{
+    overflow: auto;
+}
+.nav li{
+    float: left;
+    display: inline-block;
+    list-style: none;
+    margin: 30px;
+    color: whitesmoke;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav li a button{
+    font-size: large;
+    margin-left: 1100px;
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    background-color: red;
+    color: white;
+}
+.login{
+    text-align: center;
+    font-size: large;
+    color: white;
+    font-family: calibri;
+}
+.login h1{
+    margin-top: 50px;
+    font-size: 55px;
+}
+.login h2{
+    margin-top: 30px;
+    font-size: 45px;
+    color: rgb(178, 178, 178);
+}
+.login p{
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.login input{
+    width: 400px;
+    height: 35px;
+    border-radius: 2px;
+    font-size: large;
+    color: red;
+    border: none;
+}
+.login button{
+    width: 300px;
+    height: 35px;
+    border-radius: 2px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: large;
+}
+.box1{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.box1 h1{
+    font-size: 55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 100px;
+}
+.box1 p{
+    font-family: calibri;
+    font-size: xx-large;
+    padding-left: 100px;
+}
+.box1 img{
+    padding-left: 100px;
+}
+.box2{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.box2 h1{
+    font-size: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 0px;
+    line-height: 100px;
+}
+.box2 p{
+    font-family: calibri;
+    font-size: 30px;
+    padding-left: 10px;
+}
+.box2 img{
+    padding-left: 10px;
+}
+.box3{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.box3 h1{
+    font-size: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 75px;
+    line-height: 100px;
+}
+.box3 p{
+    font-family: calibri;
+    font-size: 30px;
+    padding-left: 75px;
+}
+.box3 img{
+    padding-left: 10px;
+}
+.box4{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.box4 h1{
+    font-size: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 110px;
+    line-height: 100px;
+}
+.box4 p{
+    font-family: calibri;
+    font-size: 30px;
+    padding-left: 110px;
+}
+.box4 img{
+    padding-left: 10px;
+}
+.box5{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    max-width: 75%;
+    margin: auto;
+}
+.box5 h1{
+    font-size: 55px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: calibri;
+}
+.btn{
+    background-color: rgb(113, 113, 113);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size:30px;
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+}
+.btn i{
+    font-size: x-large;
+}
+.active, .btn:hover{
+    background-color: rgb(218, 218, 218);
+}
+.pannel1{
+    padding: 0 10px 15px 20px;
+    background-color: rgb(218, 218, 218);
+    overflow: hidden;
+    background-color: rgb(218, 218, 218);
+    display: none;
+}
+.pannel1 p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: x-large;
+    line-height: 0.9;
+}
+.faq{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 10px 0px;
+}
+.faq active{
+    border: none;
+}
+.footer{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+.footer tr th{
+    text-align: left;
+    font-size: x-large;
+    padding-left: 150px;
+    padding-top: 52px;
+    line-height: 70px;
+}
+.footer tr td a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin-left: 200px;
+    line-height: 50px;
+    color: white;
+    font-family: ink free;
+}
+.footer tr td a:hover{
+    border-bottom: 1px solid rgb(255, 0, 0);
+    color: red;
+}

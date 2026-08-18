@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NEXORA | Anirudh Jangra</title>
+  <meta name="description" content="Get in touch with Anirudh Jangra at NEXORA for freelance web development. Email anirudhjangra3@gmail.com or call +91 90505 43063." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B2342'/%3E%3Cpath d='M21 20v24M21 20l22 24V20' stroke='%23F6F1E7' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='43' cy='42' r='4' fill='%236A1F2E'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+
+  <!-- ======= NAVBAR ======= -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letter">N</span>
+          <span class="brand-mark-dot"></span>
+        </span>
+        <span class="brand-name">Nexora</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link is-active">Contact</a>
+        <a href="contact.html" class="btn btn-midnight nav-cta">Hire Me</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= PAGE HERO ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">Contact</p>
+        <h1 class="page-title reveal">Let's build something <span class="serif-italic wine">great</span></h1>
+        <p class="page-sub reveal">
+          Have a project in mind? Tell me about it and I'll get back to you within
+          24 hours. Free consultation — no pressure.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= CONTACT ======= -->
+    <section class="section contact" style="padding-top: 90px;">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow eyebrow-light">Reach Me Directly</p>
+          <h2 class="section-title">
+            Prefer email or a quick call?
+            <span class="serif-italic contact-accent">Let's talk.</span>
+          </h2>
+          <p>
+            You can also reach me directly through the details below — I usually reply
+            within a few hours during working days.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:anirudhjangra3@gmail.com" class="contact-link">
+              <small>Email</small><b>anirudhjangra3@gmail.com</b>
+            </a>
+            <a href="tel:+919050543063" class="contact-link">
+              <small>Phone / WhatsApp</small><b>+91 90505 43063</b>
+            </a>
+          </div>
+          <div class="socials">
+            <a href="#" class="social">GitHub</a>
+            <a href="#" class="social">LinkedIn</a>
+            <a href="#" class="social">Instagram</a>
+            <a href="#" class="social">Behance</a>
+          </div>
+          <div class="page-hero-foot" style="border-top-color: rgba(246,241,231,.15);">
+            <div class="page-stat"><b style="color: #e4c4cb;" class="count" data-target="24">0</b><small style="color: rgba(246,241,231,.55);">hr Response</small></div>
+            <div class="page-stat"><b style="color: #e4c4cb;" class="count" data-target="100">0</b><small style="color: rgba(246,241,231,.55);">% Free Consult</small></div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <div class="field">
+            <label for="c-name">Your Name</label>
+            <input type="text" id="c-name" name="name" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="field">
+            <label for="c-email">Your Email</label>
+            <input type="email" id="c-email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="c-message">Project Details</label>
+            <textarea id="c-message" name="message" rows="5" placeholder="What do you need built?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-wine btn-block">Send Message</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======= FAQ ======= -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Common Questions</p>
+        <h2 class="section-title reveal">Before You <span class="serif-italic wine">Ask</span></h2>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <div class="faq-q">How much does a website cost?</div>
+            <div class="faq-a">
+              It depends on the project — a landing page costs less than a full
+              e-commerce store. Send me your requirements and I'll give you a clear,
+              honest quote before we start. No hidden charges.
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">How long will my project take?</div>
+            <div class="faq-a">
+              A landing page usually takes 3–5 days, a business website 1–2 weeks, and a
+              web app or store 2–4 weeks. You'll get a timeline upfront and regular
+              progress updates along the way.
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">Do you provide revisions?</div>
+            <div class="faq-a">
+              Yes. Every project includes a set number of revision rounds so we can get
+              the design exactly right. Small tweaks after launch are always welcome.
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">What if I need changes after the site is live?</div>
+            <div class="faq-a">
+              No problem. I offer ongoing support and maintenance, so you can keep your
+              site updated and secure even after the project is delivered.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-letter">N</span>
+            <span class="brand-mark-dot"></span>
+          </span>
+          <span class="brand-name">Nexora</span>
+        </a>
+        <p class="footer-brand-text">
+          Clean, modern and premium websites for businesses, freelancers and startups.
+          Built to look great and work even better.
+        </p>
+        <div class="socials footer-socials">
+          <a href="#" class="social">GitHub</a>
+          <a href="#" class="social">LinkedIn</a>
+          <a href="#" class="social">Instagram</a>
+          <a href="#" class="social">Behance</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Web Development</a>
+        <a href="services.html">UI / UX Design</a>
+        <a href="services.html">E-Commerce Stores</a>
+        <a href="services.html">College Projects</a>
+        <a href="services.html">WordPress &amp; Fixes</a>
+        <a href="services.html">SEO &amp; Performance</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:anirudhjangra3@gmail.com">anirudhjangra3@gmail.com</a>
+        <a href="tel:+919050543063">+91 90505 43063</a>
+        <span class="footer-avail">Open for freelance work</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <p>© 2026 NEXORA. All rights reserved.</p>
+        <button class="back-top" id="back-top">Back to top ↑</button>
+      </div>
+      <p class="footer-credit">Designed &amp; developed with <span class="heart">❤️</span> by Anirudh Jangra</p>
+    </div>
+  </footer>
+
+  <!-- ======= VISITOR POPUP ======= -->
+  <div class="modal visitor-popup" id="visitor-popup" aria-hidden="true">
+    <div class="modal-backdrop" data-close-popup></div>
+    <div class="modal-dialog popup-dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="modal-close" data-close-popup aria-label="Close">&times;</button>
+      <p class="eyebrow">Welcome</p>
+      <h2 class="modal-title" id="popup-title">Thanks for <span class="serif-italic wine">visiting!</span></h2>
+      <p class="modal-sub">Drop your name and number — I'll reach out to help you.</p>
+      <form class="contact-form order-form" id="popup-form">
+        <div class="field">
+          <label for="popup-name">Your Name</label>
+          <input type="text" id="popup-name" name="name" placeholder="Full name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="popup-mobile">Mobile Number</label>
+          <input type="tel" id="popup-mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel" required />
+        </div>
+        <button type="submit" class="btn btn-wine btn-block">Get Help</button>
+        <p class="form-note" id="popup-note"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="bg3d.js"></script>
+  <script src="script.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

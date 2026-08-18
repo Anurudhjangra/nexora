@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="Resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 1005px;
+    max-height: 1150px;
+    min-height: 1220px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.9);
+}
+
+.container .left_side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+.portfoliotext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portfoliotext .imgbox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.portfoliotext .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfoliotext h2{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.portfoliotext h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactinfo{
+    padding-top: 40px;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactinfo ul{
+    position: relative;
+}
+
+.contactinfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactinfo ul li a{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.contactinfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.contactinfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.Education li{
+    margin-bottom: 15px;
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.Education h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.Education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.Education h4{
+    color: #bdffac;
+    font-weight: 300;
+}
+
+.language ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #fff;
+}
+.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(38, 38, 38);
+    display: block;
+    margin-top: 5px;
+}
+
+.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.container .right_side{
+    position: relative;
+    background: #ddf4ff;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box h5{
+    font-size:  large;
+}
+
+.about .box .your_company{
+    min-width: 150px;
+}
+
+.about .box .your_company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+    font-size: large;
+    margin-right: 20px;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+
+.skills .box .percentage{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #adadad;
+}
+
+.skills .box .percentage div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interest ul li i{
+    color: #03a9f4;
+}
+
+.btn button{
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    font-size: large;
+    background: #03a9f4;
+    color: #003147;
+}
+
+.btn button:hover{
+    color: #03a9f4;
+    background: #003147;
+}
+
+.btn button{
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: large;
+    background: #03a9f4;
+    color: #003147;
+}
+
+.btn2 button:hover{
+    color: #03a9f4;
+    background: #003147;
+}
+
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .interest ul
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 600px) 
+{
+    .about .box
+    {
+        flex-direction: column;
+    }
+
+    .about .box .your_company
+    {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .interest ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills  .box
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="portfoliotext">
+                <div class="imgbox">
+                    <img width="250" src="anirudh img.jpg" alt="">
+                </div>
+                <h2>Anirudh Jangra<br><span>Web Developer</span></h2>
+            </div>
+
+            <div class="contactinfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><a href="tel:9050543063"><i class="fa-solid fa-phone"></i></a></span>
+                        <span class="text">+91-9050543063</span>
+                    </li>
+                    <li>
+                        <span class="icon"><a href="mailto:anirudhjangra4@gmail.com"><i class="fas fa-envelope"></i></a></span>
+                        <span class="text">anirudhjangra4@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><a href="https://www.instagram.com/anirudh_jangra_/"><i class="fa-brands fa-instagram"></i></a></span>
+                        <span class="text">anirudh_jangra_</span>
+                    </li>
+                    <li>
+                        <span class="icon"><a href="https://web.snapchat.com/"><i class="fa-brands fa-snapchat"></i></a></span>
+                        <span class="text">Anirudh_Jangra</span>
+                    </li>
+                    <li>
+                        <span class="icon"><a href=""><i class="fa-solid fa-globe"></i></a></span>
+                        <span class="text">Gurauthi, Rohtak, Haryana-(124514)</span>
+                    </li>
+                </ul>
+        </div><br>
+
+        <hr><br>    
+
+        <div class="Education">
+            <h3 class="title">Education</h3>
+            <ul>
+                <li>
+                    <h5>2028 - 2029</h5>
+                    <h4>Master Degree In Computer Application</h4>
+                    <h4>Maharshi Dayanand University (Rohtak)</h4>
+                </li>
+                <li>
+                    <h5>2024 - 2028</h5>
+                    <h4>Bachelor Degree In Computer Application</h4>
+                    <h4>Maharshi Dayanand University (Rohtak)</h4>
+                </li>
+                <li>
+                    <h5>2012 - 2024</h5>
+                    <h4>Matriculation</h4>
+                    <h4>Ramanuj Se. Sec. School</h4>
+                </li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="language">
+            <h3 class="title">Languages</h3>
+            <ul>
+                <li>
+                    <span class="text">ENGLISH</span>
+                    <span class="percent">
+                        <div style="width: 80%;"></div>
+                    </span>
+                </li>
+                <li>
+                    <span class="text">HINDI</span>
+                    <span class="percent">
+                        <div style="width: 95%;"></div>
+                    </span>
+                </li>
+                <li>
+                    <span class="text">PUNJABI</span>
+                    <span class="percent">
+                        <div style="width: 40%;"></div>
+                    </span>
+                </li>
+                <li>
+                    <span class="text">ANOTHER</span>
+                    <span class="percent">
+                        <div style="width: 20%;"></div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="right_side">
+        <div class="about">
+            <h2 class="title2">Profile</h2>
+            <p>Hi! My name is Anirudh, and I’m currently a 1st Year student at Maharashi Dayanand University (Rohtak),
+                majoring in Bachelor of Computer Application. I am from a small village named Gharawathi. It is at a 
+                distance of approximately 17 km from Rohtak. In my free time, I read novels and watch movies and web series.
+                It’s exciting to be here and I can’t wait to see what the future holds! <br><br>
+
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos tenetur error dolore dicta consectetur quasi
+               nostrum necessitatibus quidem molestias quia vitae molestiae iure perferendis rerum, corporis architecto quod
+               beatae aliquam quia vitae molestiae iure perferendis rerum, corporis architecto.
+            </p>
+        </div>
+
+        <div class="about">
+            <h2 class="title2">Experience</h2>
+            <div class="box">
+                <div class="year_company">
+                    <h5>2020 - 2021</h5>
+                    <h5>Google International</h5>
+                </div>
+                <div class="text">
+                    <h4>Junior Web Devloper</h4>
+                    <p>Junior Developer is an entry-level programmer who assists in coding, testing, and maintaining 
+                        software or web applications. Typically, they are gaining experience and working under the
+                         guidance of more senior developers to enhance their technical skills and understanding of
+                          development processes.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="year_company">
+                    <h5>2021 - 2022</h5>
+                    <h5>Microsoft International</h5>
+                </div>
+                <div class="text">
+                    <h4>Data Operator</h4>
+                    <p>Data Operator is responsible for managing, processing, and organizing data in various systems.
+                        They ensure data accuracy, update records, and assist in data entry tasks, often working with
+                        databases, spreadsheets, or specialized software.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="year_company">
+                    <h5>2022 - 2023</h5>
+                    <h5>Microsoft International</h5>
+                </div>
+                <div class="text">
+                    <h4>Data Analysis</h4>
+                    <p>Data Analyst is responsible for collecting, processing, and analyzing data to help organizations make
+                         informed decisions. They use statistical tools and software to identify trends, patterns, and 
+                         insights from data sets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about skills">
+            <h2 class="title2">Profesional Skills</h2>
+            <div class="box">
+                <h4>HTML</h4>
+                <div class="percentage">
+                    <div style="width: 95%;"></div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <h4>CSS</h4>
+                <div class="percentage">
+                    <div style="width: 92%;"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h4>Java Script</h4>
+                <div class="percentage">
+                    <div style="width: 40%;"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h4>Python</h4>
+                <div class="percentage">
+                    <div style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h4>Photoshop</h4>
+                <div class="percentage">
+                    <div style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about interest">
+            <h2 class="title2">Interest</h2>
+            <ul>
+                <li><i class="fa-solid fa-gamepad"></i> Gaming</li>
+                <li><i class="fa-solid fa-tv"></i> Watching</li>
+                <li><i class="fa-solid fa-book-open-reader"></i> Reading</li>
+                <li><i class="fa-solid fa-tree"></i> Gardening</li>
+            </ul>
+        </div>
+
+
+        <div class="btn">
+            <center>
+            <a href="MY PORTFOLIO.html"><button type="submit">Download Portfolio</button></a>
+            <a href="Resume.html" download=""><button type="submit">Download Resume</button></a>
+        </center>
+        </div>
+
+        <div class="btn 2">
+            <center>
+            <a href="MY PORTFOLIO.html"><button type="submit">Visit Portfolio</button></a>
+        </center>
+        </div>
+
+
+    
+    </div>
+
+</body>
+</html>

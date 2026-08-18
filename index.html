@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXORA — Anirudh Jangra | Freelance Web Developer</title>
+  <meta name="description" content="NEXORA — Freelance web developer Anirudh Jangra building clean, modern and premium websites for businesses, freelancers and startups." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B2342'/%3E%3Cpath d='M21 20v24M21 20l22 24V20' stroke='%23F6F1E7' stroke-width='4.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='43' cy='42' r='4' fill='%236A1F2E'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+
+  <!-- ======= NAVBAR ======= -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letter">N</span>
+          <span class="brand-mark-dot"></span>
+        </span>
+        <span class="brand-name">Nexora</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-midnight nav-cta">Hire Me</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= HERO ======= -->
+    <section id="home" class="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow reveal">Freelance Web Developer</p>
+          <h1 class="hero-title reveal">
+            Hi, I'm <span class="serif-italic wine">Anirudh Jangra</span>
+          </h1>
+          <p class="hero-role reveal">
+            I build <span id="rotate-word" class="serif-italic wine">websites</span>
+          </p>
+          <p class="hero-desc reveal">
+            Clean, modern and premium websites for freelancers, startups and small
+            businesses. If you need a website that feels right and works — you're in
+            the right place.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="work.html" class="btn btn-midnight">View My Work</a>
+            <a href="contact.html" class="btn btn-ghost">Let's Talk <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-side reveal">
+          <div class="hero-emblem">
+            <div class="emblem-ring"></div>
+            <div class="emblem-ring emblem-ring-2"></div>
+            <div class="emblem-core">
+              <span class="emblem-letter">N</span>
+              <small>NEXORA<br />WEB STUDIO</small>
+            </div>
+            <span class="emblem-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-stats reveal">
+        <div class="stat">
+          <b class="count" data-target="2">0</b><span class="stat-plus">+</span>
+          <small>Years Experience</small>
+        </div>
+        <div class="stat">
+          <b class="count" data-target="25">0</b><span class="stat-plus">+</span>
+          <small>Projects Done</small>
+        </div>
+        <div class="stat">
+          <b class="count" data-target="18">0</b><span class="stat-plus">+</span>
+          <small>Happy Clients</small>
+        </div>
+        <div class="stat">
+          <b class="count" data-target="100">0</b><span class="stat-plus">%</span>
+          <small>Commitment</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= MARQUEE ======= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Web Development</span><em>✦</em>
+        <span>UI / UX Design</span><em>✦</em>
+        <span>React</span><em>✦</em>
+        <span>Responsive Design</span><em>✦</em>
+        <span>E-Commerce</span><em>✦</em>
+        <span>SEO Basics</span><em>✦</em>
+        <span>Web Development</span><em>✦</em>
+        <span>UI / UX Design</span><em>✦</em>
+        <span>React</span><em>✦</em>
+        <span>Responsive Design</span><em>✦</em>
+        <span>E-Commerce</span><em>✦</em>
+        <span>SEO Basics</span><em>✦</em>
+      </div>
+    </div>
+
+    <!-- ======= ABOUT PREVIEW ======= -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-intro">
+          <p class="eyebrow reveal">About Me</p>
+          <h2 class="section-title reveal">
+            Turning ideas into
+            <span class="serif-italic wine">beautiful</span> websites
+          </h2>
+          <p class="reveal">
+            I'm a freelance web developer from India. I help businesses, freelancers and
+            startups get a professional online presence — fast, clean and easy to maintain.
+            I focus on the details that make a website feel polished: typography, spacing,
+            motion and speed.
+          </p>
+          <p class="reveal">
+            Currently available for freelance projects, small business websites, landing
+            pages and React-based web apps.
+          </p>
+          <a href="about.html" class="link-wine reveal">More about me <span>→</span></a>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="about-card-head">
+            <span class="about-card-label">Quick Facts</span>
+            <span class="about-card-dot"></span>
+          </div>
+          <div class="fact"><span>Name</span><b>Anirudh Jangra</b></div>
+          <div class="fact"><span>Based in</span><b>India</b></div>
+          <div class="fact"><span>Availability</span><b>Open for work</b></div>
+          <div class="fact"><span>Focus</span><b>Frontend &amp; Web Design</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= SERVICES PREVIEW ======= -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">Services</p>
+        <h2 class="section-title reveal">What I Can <span class="serif-italic wine">Do For You</span></h2>
+
+        <div class="services-list">
+          <article class="service-row reveal">
+            <span class="service-num">01</span>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">Business websites, landing pages and web apps built with modern HTML, CSS and JavaScript.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">02</span>
+            <h3 class="service-title">UI / UX Design</h3>
+            <p class="service-desc">Clean, user-friendly designs in Figma that look premium and convert visitors into customers.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">03</span>
+            <h3 class="service-title">Responsive &amp; Fast</h3>
+            <p class="service-desc">Every site works perfectly on mobile, tablet and desktop — and loads fast for better SEO.</p>
+            <span class="service-arrow">→</span>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">04</span>
+            <h3 class="service-title">Support &amp; Fixes</h3>
+            <p class="service-desc">Updates, bug fixes and improvements for existing websites so they stay fresh and secure.</p>
+            <span class="service-arrow">→</span>
+          </article>
+        </div>
+
+        <a href="services.html" class="link-wine reveal">See all services <span>→</span></a>
+      </div>
+    </section>
+
+    <!-- ======= FEATURED WORK ======= -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Selected Work</p>
+            <h2 class="section-title">Featured <span class="serif-italic wine">Projects</span></h2>
+          </div>
+          <p class="section-note">A few examples of the kind of work I do. Your project can be next.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art art-1"></div>
+            <div class="project-body">
+              <div class="project-meta"><span>Web App</span><span>2026</span></div>
+              <h3 class="project-title">E-Commerce Store</h3>
+              <p class="project-desc">A clean online store with product pages, cart and checkout-ready frontend.</p>
+              <a href="work.html" class="project-link">View Project →</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-2"></div>
+            <div class="project-body">
+              <div class="project-meta"><span>Business Site</span><span>2025</span></div>
+              <h3 class="project-title">Real Estate Website</h3>
+              <p class="project-desc">A modern website for a property agency with listings, search and enquiry forms.</p>
+              <a href="work.html" class="project-link">View Project →</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-3"></div>
+            <div class="project-body">
+              <div class="project-meta"><span>UI Design</span><span>2025</span></div>
+              <h3 class="project-title">Restaurant Landing Page</h3>
+              <p class="project-desc">An elegant one-page site with menu, gallery and online table booking.</p>
+              <a href="work.html" class="project-link">View Project →</a>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 44px;" class="reveal">
+          <a href="work.html" class="btn btn-midnight">View All Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= SKILLS PREVIEW ======= -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">My Toolkit</p>
+        <h2 class="section-title reveal">Skills &amp; <span class="serif-italic wine">Technologies</span></h2>
+
+        <div class="chips reveal">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">Bootstrap</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Git &amp; GitHub</span>
+          <span class="chip">Responsive Design</span>
+          <span class="chip">WordPress Basics</span>
+          <span class="chip">SEO Basics</span>
+          <span class="chip">Performance</span>
+        </div>
+
+        <a href="skills.html" class="link-wine reveal" style="margin-top: 40px;">See full skills <span>→</span></a>
+      </div>
+    </section>
+
+    <!-- ======= TESTIMONIALS ======= -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Testimonials</p>
+        <h2 class="section-title reveal">What Clients <span class="serif-italic wine">Say</span></h2>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Anirudh built our business website from scratch. Clean, fast and exactly
+              what we asked for. Communication was smooth throughout."
+            </p>
+            <div class="testimonial-who">
+              <b>Rahul Sharma</b>
+              <small>Founder, Rahul Traders</small>
+            </div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The landing page he designed doubled our enquiry calls. It looks premium
+              and loads instantly on mobile. Highly recommended."
+            </p>
+            <div class="testimonial-who">
+              <b>Priya Verma</b>
+              <small>Marketing Lead, FitPro</small>
+            </div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Easy to work with, delivered before the deadline, and the support after
+              launch was fantastic. Will hire again for our next project."
+            </p>
+            <div class="testimonial-who">
+              <b>Mohit Bansal</b>
+              <small>Owner, Bloom Market</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CTA ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Have a project in mind? Let's build something great together.</h2>
+            <p>Free consultation, no pressure. I'll get back to you within 24 hours.</p>
+          </div>
+          <a href="contact.html" class="btn btn-wine">Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-letter">N</span>
+            <span class="brand-mark-dot"></span>
+          </span>
+          <span class="brand-name">Nexora</span>
+        </a>
+        <p class="footer-brand-text">
+          Clean, modern and premium websites for businesses, freelancers and startups.
+          Built to look great and work even better.
+        </p>
+        <div class="socials footer-socials">
+          <a href="#" class="social">GitHub</a>
+          <a href="#" class="social">LinkedIn</a>
+          <a href="#" class="social">Instagram</a>
+          <a href="#" class="social">Behance</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Web Development</a>
+        <a href="services.html">UI / UX Design</a>
+        <a href="services.html">E-Commerce Stores</a>
+        <a href="services.html">College Projects</a>
+        <a href="services.html">WordPress &amp; Fixes</a>
+        <a href="services.html">SEO &amp; Performance</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:anirudhjangra3@gmail.com">anirudhjangra3@gmail.com</a>
+        <a href="tel:+919050543063">+91 90505 43063</a>
+        <span class="footer-avail">Open for freelance work</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-row">
+        <p>© 2026 NEXORA. All rights reserved.</p>
+        <button class="back-top" id="back-top">Back to top ↑</button>
+      </div>
+      <p class="footer-credit">Designed &amp; developed with <span class="heart">❤️</span> by Anirudh Jangra</p>
+    </div>
+  </footer>
+
+  <!-- ======= VISITOR POPUP ======= -->
+  <div class="modal visitor-popup" id="visitor-popup" aria-hidden="true">
+    <div class="modal-backdrop" data-close-popup></div>
+    <div class="modal-dialog popup-dialog" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="modal-close" data-close-popup aria-label="Close">&times;</button>
+      <p class="eyebrow">Welcome</p>
+      <h2 class="modal-title" id="popup-title">Thanks for <span class="serif-italic wine">visiting!</span></h2>
+      <p class="modal-sub">Drop your name and number — I'll reach out to help you.</p>
+      <form class="contact-form order-form" id="popup-form">
+        <div class="field">
+          <label for="popup-name">Your Name</label>
+          <input type="text" id="popup-name" name="name" placeholder="Full name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="popup-mobile">Mobile Number</label>
+          <input type="tel" id="popup-mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel" required />
+        </div>
+        <button type="submit" class="btn btn-wine btn-block">Get Help</button>
+        <p class="form-note" id="popup-note"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="bg3d.js"></script>
+  <script src="script.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

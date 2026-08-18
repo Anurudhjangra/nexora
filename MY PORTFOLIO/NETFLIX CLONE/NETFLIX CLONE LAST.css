@@ -1,0 +1,356 @@
+/* General styles and resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This is a crucial addition for responsive design */
+}
+
+body {
+    background-color: #000; /* Set a consistent black background */
+}
+
+/* --- Navigation Bar --- */
+
+.nav {
+    background-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 0, 0));
+    padding: 10px 20px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 15px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav .logo {
+    width: 120px;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    margin-right: 20px;
+}
+
+.data h1 {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.data input {
+    width: 300px; /* Reduced width for better responsiveness */
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: medium;
+    border: none;
+    outline: none;
+}
+
+/* --- Content Boxes (box1, box2, etc.) --- */
+
+.box1, .box2, .box3, .box4, .box5 {
+    height: 700px; /* Adjusted height for better mobile viewing */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    color: white;
+}
+
+.box1 {
+    background-image: url(img\ 3.jpg);
+}
+
+.box2 {
+    background-image: url(img4.webp);
+}
+
+.box3 {
+    background-image: url(imeage5.png);
+    color: black;
+}
+
+.box4 {
+    background-image: url(image6.avif);
+    color: black;
+}
+
+.box5 {
+    background-image: url(image7.avif);
+}
+
+.box1 h1, .box2 h2, .box3 h2, .box4 h2, .box5 h2 {
+    font-size: 2.5rem;
+    font-family: calibri;
+    margin-bottom: 10px;
+}
+
+.box1 b, .box2 b, .box3 b, .box4 b, .box5 b {
+    font-size: 1.1rem;
+    font-family: calibri;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.box-buttons button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    width: 150px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box-buttons button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* This is a new class for better button organization */
+.box1 .box-buttons, .box2 .box-buttons, .box3 .box-buttons, .box4 .box-buttons, .box5 .box-buttons {
+    margin-top: 15px;
+}
+
+/* Movie rows and tables */
+h1.section-title {
+    font-size: 2.5rem;
+    color: white;
+    margin: 20px 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.movie-row {
+    padding: 0 50px 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.movie-row table {
+    display: flex;
+}
+
+.movie-row td {
+    padding: 10px;
+}
+
+.movie-row a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-row a img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movie-row a:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.movie-row a p {
+    text-align: center;
+    color: red;
+    font-family: calibri;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.box6 {
+    background-color: #141414; /* Darker black for contrast */
+    padding: 20px 50px;
+}
+
+.box6 h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.box6 table {
+    width: 100%;
+}
+
+.box6 tr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.box6 td {
+    flex: 1;
+    padding: 10px;
+}
+
+.box6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.box6 img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+
+.footer {
+    background-color: #141414;
+    color: white;
+    padding: 50px;
+}
+
+.footer table {
+    width: 100%;
+}
+
+.footer tr th {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.footer tr td a {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 1rem;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.footer tr td a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media screen and (max-width: 768px) {
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav li {
+        margin: 10px;
+        font-size: medium;
+    }
+
+    .nav .logo {
+        width: 100px;
+    }
+
+    .data {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .data h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .data input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .box1, .box2, .box3, .box4, .box5 {
+        height: auto;
+        padding: 30px;
+    }
+
+    .box1 h1, .box2 h2, .box3 h2, .box4 h2, .box5 h2 {
+        font-size: 2rem;
+    }
+
+    .box1 b, .box2 b, .box3 b, .box4 b, .box5 b {
+        font-size: 1rem;
+    }
+
+    .box-buttons button {
+        width: 120px;
+        height: 35px;
+    }
+
+    .movie-row {
+        padding: 0 20px 20px;
+    }
+    
+    .movie-row a img {
+        width: 150px; /* Smaller images for mobile */
+    }
+
+    h1.section-title {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    
+    .box6 h1 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+    
+    .box6 tr {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+    
+    .footer table {
+        display: block;
+    }
+
+    .footer tr th {
+        font-size: 1.2rem;
+        padding-left: 0;
+    }
+
+    .footer tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .footer tr td a {
+        margin-left: 0;
+        line-height: 1.5;
+    }
+}

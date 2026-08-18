@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign In - Responsive</title>
+    <link rel="stylesheet" href="NETFLIX CLONE PAGE 2.css">
+</head>
+<body>
+    <div class="box1">
+        <header class="page-header">
+            <img width="140" src="netflix logo.png" alt="Netflix Logo">
+        </header>
+
+        <div class="box2">
+            <h1>Sign In</h1>
+
+            <!-- Form with a name and onsubmit event for validation -->
+            <form name="myForm" action="NETFLIX CLONE LAST.html" onsubmit="return validationForm()">
+                <div class="formdesign" id="email-field">
+                    <input type="text" placeholder="Email or Phone Number" name="email">
+                    <span class="formerror"></span>
+                </div>
+                
+                <div class="formdesign" id="password-field">
+                    <input type="password" placeholder="Password" name="password">
+                    <span class="formerror"></span>
+                </div>
+
+                <button type="submit">Sign In</button>
+            </form>
+
+            <div class="form-help">
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="C2">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <a href="#">Need Help?</a>
+            </div>
+
+            <div class="sign-up-info">
+                <p>New to Netflix? <a href="#">Sign up now</a>.</p>
+                <p class="recaptcha-text">
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function seterror(id, error) {
+            // Sets error message inside the span with class 'formerror'
+            let element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+        }
+
+        function clearErrors(){
+            // Clear all previous errors
+            let errors = document.getElementsByClassName('formerror');
+            for(let item of errors){
+                item.innerHTML = "";
+            }
+        }
+
+        function validationForm() {
+            let returnval = true;
+            clearErrors();
+
+            // Perform validation for email/phone
+            let email = document.forms['myForm']["email"].value;
+            if (email.length < 5) {
+                seterror("email-field", "*Please enter a valid email or phone number.");
+                returnval = false;
+            }
+
+            // Perform validation for password
+            let password = document.forms['myForm']["password"].value;
+            if (password.length < 4) {
+                seterror("password-field", "*Password must be at least 4 characters long.");
+                returnval = false;
+            }
+            
+            return returnval;
+        }
+    </script>
+</body>
+</html>

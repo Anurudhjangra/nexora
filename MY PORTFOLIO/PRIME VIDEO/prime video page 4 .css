@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: calibri;
+}
+.navbar{
+    background-color: black;
+    color: rgb(176, 176, 176);
+}
+.navbar ul{
+    overflow: auto;
+    list-style: none;
+    padding: 0;margin: 0;
+    background-color: black;
+    text-align: center;
+    line-height: 50px;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(206, 206, 206);
+    margin-left: 15px;
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+    width: 100px;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+}
+li a:hover{
+    background: rgba(0, 195, 255, 0.179);
+}
+.box1{
+    background-color: black;
+}
+.box1 tr td span img{
+    width: 150px;
+    margin-left: 100px;
+    margin-right: 170px;
+}
+.box1 tr td p{
+    margin-left: 100px;
+    color: white;
+    font-size: 30px;
+}
+.box1 tr td button{
+    margin-left: 100px;
+    background-color: white;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: large;
+}
+.box2{
+    background-color: black;
+}
+.box2 p{
+    color: yellow;
+    font-size: xx-large;
+    margin: 20px 0;
+    margin-left: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.box2 tr td a img{
+    width: 300px;
+}
+.box td a{
+    float: left;
+    box-shadow: 0 0 20px 2px rgba(0 0 0 .1);
+    transition: 0.5s; 
+}
+.box td a img{
+    display: inline-block;
+    text-decoration: none;
+    width: 98%;
+    border-radius: 50px; 
+}
+td a :hover{
+    border-radius: 10px;
+    transition: 0.5s;
+    transform: scale(1.2);
+    z-index: 2;
+}
+.footer{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    height: 300px;
+}
+.footer img{
+    margin-top: 200px;
+}
+.foter a{
+    word-spacing: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.footer a:hover{
+    color: red;
+}
+.footer p{
+    line-height: 20px;
+    color: white;
+}

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    font-family: calibri;
+}
+.box1{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 560px;
+    padding-bottom: 10px;
+}
+.box1 h1{
+    padding-left: 10px;
+}
+.box1 h2{
+    padding-left: 10px;
+    line-height: 0px;
+    font-size: large;
+}
+.box1 input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    line-height: 0;
+    border: 1px solid black;
+    margin-left: 10px;
+    font-size: large;
+    padding-left: 10px;
+}
+.box1 button{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(226, 203, 0);
+    color: rgb(0, 0, 0);
+    line-height: 0;
+    font-size: large;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+.box1 a{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: small;
+}
+.box1 p{
+    padding-left: 10px;
+}
+.box1 b{
+    padding-left: 10px;
+}
+.box1 span{
+    color: blue;
+}
+.footer{
+    text-align: center;
+}
+.foter a{
+    word-spacing: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.footer a:hover{
+    color: red;
+}
+.footer p{
+    line-height: 20px;
+}
