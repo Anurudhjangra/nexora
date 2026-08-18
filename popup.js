@@ -74,32 +74,31 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    note.textContent = "Saving your details...";
-    note.classList.remove("error");
-    submitBtn.disabled = true;
-
-    /* Save the lead — the server then auto-sends a WhatsApp message
-       from 9050132207 to this visitor's number */
+    /* Try to save to backend (works when server.js is running) */
     try {
-      const res = await fetch("/api/leads", {
+      await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, mobile }),
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error("save failed");
-
-      if (data.whatsapp) {
-        note.textContent =
-          "Thanks " + name + "! A WhatsApp message is on its way to your number.";
-      } else {
-        note.textContent =
-          "Thanks " + name + "! Your details are saved — I'll message you on WhatsApp soon.";
-      }
     } catch (err) {
-      note.textContent = "Thanks " + name + "! I'll reach out on WhatsApp shortly.";
+      /* Backend not available — that's fine, WhatsApp is the primary channel */
     }
 
+    /* Open WhatsApp so the visitor can message 9050132207 directly */
+    const message =
+      "Hi Anirudh! I just visited your website. This is " +
+      name +
+      " (" +
+      mobile +
+      "). Can you tell me more about your services?";
+    window.open(
+      "https://wa.me/9050132207?text=" + encodeURIComponent(message),
+      "_blank"
+    );
+
+    note.textContent =
+      "Thanks " + name + "! WhatsApp is opening so we can chat.";
     note.classList.remove("error");
     submitBtn.textContent = "Done";
     setTimeout(closePopup, 2000);
