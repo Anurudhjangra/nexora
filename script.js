@@ -146,7 +146,7 @@ function initFAQ() {
   });
 }
 
-/* ---------- Contact form → opens email app ---------- */
+/* ---------- Contact form → saves to Google Sheets + opens email app ---------- */
 function initContactForm() {
   const form = document.getElementById("contact-form");
   const note = document.getElementById("form-note");
@@ -164,6 +164,20 @@ function initContactForm() {
       note.classList.add("error");
       return;
     }
+
+    /* Save to Google Sheets */
+    try {
+      fetch("https://script.google.com/macros/s/AKfycbz70kE1J-jKJQASFwN0mpy2neY41Gm1bEuVNJ-gOwR5e8X7W-Td_h2Qi_NqUiPySnh2/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          type: "Contact",
+          name: name,
+          email: email,
+          message: message
+        }),
+      });
+    } catch (err) { /* ignore */ }
 
     const subject = encodeURIComponent("Project enquiry from " + name);
     const body = encodeURIComponent(
@@ -247,13 +261,17 @@ function initOrderModal() {
 
     /* Save order to Google Sheets */
     try {
-      fetch("https://script.google.com/macros/s/AKfycbz54KfNT91T-YM5T1Uul3QubL6vNYsTjcj0_HR9KaT97EkKbExBOk54HcqWJxfOSEM/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbwsiFGZS_hTYEhNkaN-dCgeIq5-TOAvHH-VfJDrhkmFywrXUWr9upt1x0x4cRbDA47Utg/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
+          type: "Orders",
           name: name,
+          email: email,
           mobile: phone,
-          page: "Order: " + plan + (college ? " | " + college : "") + " | " + details.substring(0, 100)
+          plan: plan,
+          college: college || "",
+          details: details
         }),
       });
     } catch (err) { /* ignore */ }

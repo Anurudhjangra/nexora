@@ -5,7 +5,7 @@
    - Opens WhatsApp so visitor can message 9050132207
    ============================================================ */
 
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz54KfNT91T-YM5T1Uul3QubL6vNYsTjcj0_HR9KaT97EkKbExBOk54HcqWJxfOSEM/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxKYfG7JwsgB6zFrIO4NeZPVYYMsD-t7hJ50W71rmm8ZYbKb3FeLgLjKG7KfyPQFlJb/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("visitor-popup");
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
+          type: "Popup",
           name: name,
           mobile: mobile,
           page: document.title || "Home"
