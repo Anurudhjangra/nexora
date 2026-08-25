@@ -244,6 +244,20 @@ function initOrderModal() {
 
     const plan = planInput.value.trim() || "Custom Order";
     const college = collegeInput.value.trim();
+
+    /* Save order to Google Sheets */
+    try {
+      fetch("https://script.google.com/macros/s/AKfycbz54KfNT91T-YM5T1Uul3QubL6vNYsTjcj0_HR9KaT97EkKbExBOk54HcqWJxfOSEM/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: name,
+          mobile: phone,
+          page: "Order: " + plan + (college ? " | " + college : "") + " | " + details.substring(0, 100)
+        }),
+      });
+    } catch (err) { /* ignore */ }
+
     const message =
       "Hi Anirudh, I want to place an order.\n\n" +
       "Plan: " + plan + "\n" +

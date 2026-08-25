@@ -1,10 +1,11 @@
 /* ============================================================
    NEXORA — VISITOR POPUP
    - Shows a form when someone visits the site (once per day)
-   - Saves name + mobile to MongoDB via /api/leads
-   - Server auto-sends a WhatsApp message (Cloud API) from your
-     number to the visitor
+   - Saves name + mobile to Google Sheets via Apps Script
+   - Opens WhatsApp so visitor can message 9050132207
    ============================================================ */
+
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz54KfNT91T-YM5T1Uul3QubL6vNYsTjcj0_HR9KaT97EkKbExBOk54HcqWJxfOSEM/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("visitor-popup");
@@ -74,15 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    /* Try to save to backend (works when server.js is running) */
+    /* Save to Google Sheets */
     try {
-      await fetch("/api/leads", {
+      fetch(SHEETS_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, mobile }),
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: name,
+          mobile: mobile,
+          page: document.title || "Home"
+        }),
       });
     } catch (err) {
-      /* Backend not available — that's fine, WhatsApp is the primary channel */
+      /* Sheets not available — WhatsApp is the primary channel */
     }
 
     /* Open WhatsApp so the visitor can message 9050132207 directly */
