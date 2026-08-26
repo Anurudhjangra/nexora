@@ -170,6 +170,7 @@ function initContactForm() {
       fetch("https://script.google.com/macros/s/AKfycby5dOffAkTHbBhAn_HrDWuMgSi28-OtR0ikoVnrVXn9eyimNqBhPULHMRu0Iexx36VV/exec", {
         method: "POST",
         mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
           type: "Contact",
           name: name,
@@ -264,6 +265,7 @@ function initOrderModal() {
       fetch("https://script.google.com/macros/s/AKfycbzgpHM9pqyonTrZsBBzudre4zt-vMeEeaKOr4nYZPxErc_fVVMqoY96zOHv3yh6LD_8nQ/exec", {
         method: "POST",
         mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
           type: "Orders",
           name: name,
