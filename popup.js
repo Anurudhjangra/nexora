@@ -75,19 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    /* Save to Google Sheets */
+    /* Save to Google Sheets via sendBeacon (no CORS issues) */
     try {
-      fetch(SHEETS_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify({
-          type: "Popup",
-          name: name,
-          mobile: mobile,
-          page: document.title || "Home"
-        }),
-      });
+      navigator.sendBeacon(SHEETS_URL, JSON.stringify({
+        name: name,
+        mobile: mobile,
+        page: document.title || "Home"
+      }));
     } catch (err) {
       /* Sheets not available — WhatsApp is the primary channel */
     }
