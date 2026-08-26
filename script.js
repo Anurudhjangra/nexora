@@ -167,7 +167,7 @@ function initContactForm() {
 
     /* Save to Google Sheets */
     try {
-      fetch("https://script.google.com/macros/s/AKfycbz70kE1J-jKJQASFwN0mpy2neY41Gm1bEuVNJ-gOwR5e8X7W-Td_h2Qi_NqUiPySnh2/exec", {
+      fetch("https://script.google.com/macros/s/AKfycby5dOffAkTHbBhAn_HrDWuMgSi28-OtR0ikoVnrVXn9eyimNqBhPULHMRu0Iexx36VV/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
@@ -261,7 +261,7 @@ function initOrderModal() {
 
     /* Save order to Google Sheets */
     try {
-      fetch("https://script.google.com/macros/s/AKfycbwsiFGZS_hTYEhNkaN-dCgeIq5-TOAvHH-VfJDrhkmFywrXUWr9upt1x0x4cRbDA47Utg/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbzgpHM9pqyonTrZsBBzudre4zt-vMeEeaKOr4nYZPxErc_fVVMqoY96zOHv3yh6LD_8nQ/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
